@@ -6,6 +6,7 @@ import ComponentA from "./components/nestedComponents/ComponentA";
 import ComponentB from "./components/nestedComponents/ComponentB";
 import ComponentC from "./components/nestedComponents/ComponentC";
 import "./App.css";
+import DataFetchingWithUseReducer from "./components/DataFetchingWithUseState/DataFetchingWithUseReducer";
 
 export const FirstContext = React.createContext();
 export const SecondContext = React.createContext();
@@ -34,9 +35,10 @@ function App() {
                 <SecondContext.Provider value={"second"}>
                     {/*<ContextExample />*/}
                     {/*<CounterWithComplexReducer />*/}
-                    <ComponentA/>
-                    <ComponentB/>
-                    <ComponentC/>
+                    {/*<ComponentA/>*/}
+                    {/*<ComponentB/>*/}
+                    {/*<ComponentC/>*/}
+                    <DataFetchingWithUseReducer />
                 </SecondContext.Provider>
             </FirstContext.Provider>
         </div>
