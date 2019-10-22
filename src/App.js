@@ -1,26 +1,46 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import React, {useReducer} from "react";
+import ContextExample from "./components/useContext/ContextExample";
+// import CounterWithReducer from "./components/useReducer/CounterWithReducer";
+// import CounterWithComplexReducer from "./components/useReducer/CounterWithComplexReducer";
+import ComponentA from "./components/nestedComponents/ComponentA";
+import ComponentB from "./components/nestedComponents/ComponentB";
+import ComponentC from "./components/nestedComponents/ComponentC";
+import "./App.css";
+
+export const FirstContext = React.createContext();
+export const SecondContext = React.createContext();
+
+const initialState = 0;
+const reducer = (state, action) => {
+    switch (action) {
+        case "increment":
+            return state + 1;
+        case "decrement":
+            return state - 1;
+        case "reset":
+            return initialState;
+        default:
+            return null;
+    }
+};
+
+const context = React.createContext();
 
 function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+    const [ count, dispatch ] = useReducer(reducer, initialState);
+    return (
+        <div className="App">
+            <FirstContext.Provider value={{countState: count, countDispatch: dispatch}}>
+                <SecondContext.Provider value={"second"}>
+                    {/*<ContextExample />*/}
+                    {/*<CounterWithComplexReducer />*/}
+                    <ComponentA/>
+                    <ComponentB/>
+                    <ComponentC/>
+                </SecondContext.Provider>
+            </FirstContext.Provider>
+        </div>
+    );
 }
 
 export default App;
