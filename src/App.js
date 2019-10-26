@@ -12,6 +12,8 @@ import InputField from "./components/useRef/InputField";
 import CounterInterval from "./components/useRef/CounterInterval";
 import DocTitleUpdateOne from "./components/DocTitleUpdateOne/DocTitleUpdateOne";
 import DocTitleUpdateTwo from "./components/DocTitleUpdateOne/DocTitleUpdateTwo";
+import CounterOne from "./components/CounterCH/CounterOne";
+import CounterTwo from "./components/CounterCH/CounterTwo";
 
 export const FirstContext = React.createContext();
 export const SecondContext = React.createContext();
@@ -47,8 +49,10 @@ function App() {
                     {/*<CounterWithMemo />*/}
                     {/*<InputField />*/}
                     {/*<CounterInterval />*/}
-                    <DocTitleUpdateOne />
-                    <DocTitleUpdateTwo />
+                    {/*<DocTitleUpdateOne />*/}
+                    {/*<DocTitleUpdateTwo />*/}
+                    <CounterOne />
+                    <CounterTwo />
                 </SecondContext.Provider>
             </FirstContext.Provider>
         </div>
