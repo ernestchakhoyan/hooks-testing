@@ -9,6 +9,7 @@ import "./App.css";
 import DataFetchingWithUseReducer from "./components/DataFetchingWithUseState/DataFetchingWithUseReducer";
 import CounterWithMemo from "./components/useMemo/CounterWithMemo";
 import InputField from "./components/useRef/InputField";
+import CounterInterval from "./components/useRef/CounterInterval";
 
 export const FirstContext = React.createContext();
 export const SecondContext = React.createContext();
@@ -43,6 +44,7 @@ function App() {
                     {/*<DataFetchingWithUseReducer />*/}
                     {/*<CounterWithMemo />*/}
                     <InputField />
+                    <CounterInterval />
                 </SecondContext.Provider>
             </FirstContext.Provider>
         </div>
