@@ -14,6 +14,7 @@ import DocTitleUpdateOne from "./components/DocTitleUpdateOne/DocTitleUpdateOne"
 import DocTitleUpdateTwo from "./components/DocTitleUpdateOne/DocTitleUpdateTwo";
 import CounterOne from "./components/CounterCH/CounterOne";
 import CounterTwo from "./components/CounterCH/CounterTwo";
+import Form from "./components/Form/Form";
 
 export const FirstContext = React.createContext();
 export const SecondContext = React.createContext();
@@ -51,8 +52,9 @@ function App() {
                     {/*<CounterInterval />*/}
                     {/*<DocTitleUpdateOne />*/}
                     {/*<DocTitleUpdateTwo />*/}
-                    <CounterOne />
-                    <CounterTwo />
+                    {/*<CounterOne />*/}
+                    {/*<CounterTwo />*/}
+                    <Form />
                 </SecondContext.Provider>
             </FirstContext.Provider>
         </div>

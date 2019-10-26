@@ -27,3 +27,19 @@ export const useCounter = (initialState = 0, value = 1) => {
 
     return [ count, increment, decrement, reset ];
 };
+
+export const useInputHook = (initialValue) => {
+    const [ value, setValue ] = useState(initialValue);
+
+    const reset = () => {
+        setValue(initialValue);
+    };
+
+    const bind = {
+        value,
+        onChange: (e) => setValue(e.target.value)
+    };
+
+    return [ value, bind, reset ];
+
+};
