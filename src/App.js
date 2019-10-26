@@ -10,6 +10,8 @@ import DataFetchingWithUseReducer from "./components/DataFetchingWithUseState/Da
 import CounterWithMemo from "./components/useMemo/CounterWithMemo";
 import InputField from "./components/useRef/InputField";
 import CounterInterval from "./components/useRef/CounterInterval";
+import DocTitleUpdateOne from "./components/DocTitleUpdateOne/DocTitleUpdateOne";
+import DocTitleUpdateTwo from "./components/DocTitleUpdateOne/DocTitleUpdateTwo";
 
 export const FirstContext = React.createContext();
 export const SecondContext = React.createContext();
@@ -43,8 +45,10 @@ function App() {
                     {/*<ComponentC/>*/}
                     {/*<DataFetchingWithUseReducer />*/}
                     {/*<CounterWithMemo />*/}
-                    <InputField />
-                    <CounterInterval />
+                    {/*<InputField />*/}
+                    {/*<CounterInterval />*/}
+                    <DocTitleUpdateOne />
+                    <DocTitleUpdateTwo />
                 </SecondContext.Provider>
             </FirstContext.Provider>
         </div>
