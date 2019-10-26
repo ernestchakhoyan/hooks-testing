@@ -8,6 +8,7 @@ import ComponentC from "./components/nestedComponents/ComponentC";
 import "./App.css";
 import DataFetchingWithUseReducer from "./components/DataFetchingWithUseState/DataFetchingWithUseReducer";
 import CounterWithMemo from "./components/useMemo/CounterWithMemo";
+import InputField from "./components/useRef/InputField";
 
 export const FirstContext = React.createContext();
 export const SecondContext = React.createContext();
@@ -40,7 +41,8 @@ function App() {
                     {/*<ComponentB/>*/}
                     {/*<ComponentC/>*/}
                     {/*<DataFetchingWithUseReducer />*/}
-                    <CounterWithMemo />
+                    {/*<CounterWithMemo />*/}
+                    <InputField />
                 </SecondContext.Provider>
             </FirstContext.Provider>
         </div>
